@@ -18,3 +18,5 @@ __pycache__/
 build/
 
 output.mp4
+
+karaoke_transcriber.egg-info
