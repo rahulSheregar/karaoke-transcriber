@@ -1,6 +1,6 @@
 {
   "name": "karaoke-transcriber",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A CLI tool to generate karaoke-style subtitles on videos using Whisper and FFmpeg.",
   "main": "dist/index.js",
   "bin": {

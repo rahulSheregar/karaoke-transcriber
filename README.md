@@ -12,6 +12,9 @@ A command-line tool that converts any video file into a karaoke-style subtitled 
 - Transcribes the speech using Whisper (openai-whisper)
 - Generates `.srt` subtitles
 - Burns the subtitles back into the video using FFmpeg
+- Includes built-in options to:
+  - Check environment dependencies before running (`--check`)
+  - View the installed CLI version (`--version`)
 
 This is ideal for:
 
@@ -39,14 +42,6 @@ Install these via pip:
 pip3 install openai-whisper srt
 ```
 
-You can also verify your environment setup using:
-
-```bash
-node check-env.js
-```
-
-This script will check for FFmpeg, Python 3, and required Python packages.
-
 ---
 
 ## 📦 Install via npm (Published Version)
@@ -61,6 +56,20 @@ Then use it from anywhere via:
 
 ```bash
 karaoke-transcriber --input path/to/input.mp4 --output path/to/output.mp4
+```
+
+### ✅ Check system dependencies
+
+```bash
+karaoke-transcriber --check
+```
+
+This will run a diagnostic script to check for FFmpeg, Python 3, Whisper, and `srt`.
+
+### 📌 View CLI version
+
+```bash
+karaoke-transcriber --version
 ```
 
 ---
@@ -80,16 +89,28 @@ cd karaoke-transcriber
 npm install
 ```
 
-### Step 3: Build the TypeScript files
+### Step 3: Install Python dependencies
+
+```bash
+pip3 install openai-whisper srt
+```
+
+### Step 4: Build the TypeScript files
 
 ```bash
 npm run build
 ```
 
-### Step 4: Run the CLI
+### Step 5: Run the CLI
 
 ```bash
 node dist/index.js --input path/to/video.mp4 --output path/to/output.mp4
+```
+
+You can also run the environment check locally:
+
+```bash
+node dist/index.js --check
 ```
 
 ---
@@ -121,11 +142,3 @@ Created by **Rahul Sheregar**
 - GitHub: [@rahulSheregar](https://github.com/rahulSheregar)
 
 ---
-
-## 📄 License
-
-MIT License
-
-```
-
-```
