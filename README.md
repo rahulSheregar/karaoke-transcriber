@@ -76,6 +76,13 @@ karaoke-transcriber --version
 
 ## 🧪 Run Locally (Development)
 
+### Step 0: Create a virtual environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 ### Step 1: Clone the Repository
 
 ```bash
@@ -83,28 +90,16 @@ git clone https://github.com/rahulSheregar/karaoke-transcriber.git
 cd karaoke-transcriber
 ```
 
-### Step 2: Install Node.js dependencies
+### Step 2: Install Python dependencies
 
 ```bash
-npm install
+pip install -e .
 ```
 
-### Step 3: Install Python dependencies
+### Step 3: Run the CLI
 
 ```bash
-pip3 install openai-whisper srt
-```
-
-### Step 4: Build the TypeScript files
-
-```bash
-npm run build
-```
-
-### Step 5: Run the CLI
-
-```bash
-node dist/index.js --input path/to/video.mp4 --output path/to/output.mp4
+transcriber --input path/to/video.mp4 --output path/to/output.mp4
 ```
 
 You can also run the environment check locally:
@@ -130,6 +125,7 @@ karaoke-transcriber/
 ├── check-env.js          # System dependency checker (optional)
 ├── package.json
 ├── tsconfig.json
+├── pyproject.toml        # automate project builder
 ├── README.md
 ```
 
@@ -140,5 +136,8 @@ karaoke-transcriber/
 Created by **Rahul Sheregar**
 
 - GitHub: [@rahulSheregar](https://github.com/rahulSheregar)
+
+Contributor:
+- Github: [@chrisdedman](https://github.com/chrisdedman)
 
 ---
