@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+
+[project]
+name = "karaoke-transcriber"
+version = "0.0.1-alpha"
+description = "A command-line tool that converts any video file into a karaoke-style subtitled video using OpenAI Whisper and FFmpeg."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "openai-whisper",
+    "srt",
+]
+
+[tool.setuptools]
+packages = ["python_backend"]
+license-files = []
+
+[project.scripts]
+transcriber = "python_backend.karaoke_gen:main"
