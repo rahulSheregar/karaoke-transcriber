@@ -14,3 +14,9 @@ __pycache__/
 
 # macOS system files
 .DS_Store
+
+build/
+
+output.mp4
+
+karaoke_transcriber.egg-info
