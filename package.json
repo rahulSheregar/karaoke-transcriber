@@ -1,0 +1,32 @@
+{
+  "name": "karaoke-transcriber",
+  "version": "1.0.0",
+  "description": "A CLI tool to generate karaoke-style subtitles on videos using Whisper and FFmpeg.",
+  "main": "dist/index.js",
+  "bin": {
+    "karaoke-transcriber": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "postinstall": "node check-env.js"
+  },
+  "keywords": [
+    "karaoke",
+    "whisper",
+    "ffmpeg",
+    "subtitle",
+    "cli",
+    "video",
+    "transcription"
+  ],
+  "author": "Rahul Sheregar (rahulsheregar1999@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.6",
+    "typescript": "^5.4.0"
+  }
+}

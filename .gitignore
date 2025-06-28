@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# TypeScript output
+dist/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# VSCode or JetBrains config
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
